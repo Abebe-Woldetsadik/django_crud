@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}     
+
+
+<div class="container justify-content-center">
+    <div class="card shadow-lg p-4" style="max-width: 1200px; margin: 0 auto;">
+        <h2 class="text-center">User Details</h2>
+        <div class="form-horizontal container form w-50 mx-auto">
+            <p><strong>First Name:</strong> {{ user.first_name }}</p>
+            <p><strong>Last Name:</strong> {{ user.last_name }}</p>
+            <p><strong>Gender:</strong> {{ user.gender }}</p>
+            <p><strong>Email:</strong> {{ user.email }}</p>
+            <p><strong>Phone Number:</strong> {{ user.phone }}</p>
+            <p><strong>Address:</strong> {{ user.address }}</p>
+           
+        </div>
+        <div class="text-center mt-4">
+            <a href="{% url 'crudapp:user_update' user.pk %}" class="btn btn-primary">Edit User</a>
+            <a href="{% url 'crudapp:user_delete' user.pk %}" class="btn btn-danger">Delete User</a>
+            <a href="{% url 'crudapp:user_list' %}" class="btn btn-secondary"> Cancel</a>
+        </div>
+    </div>
+</div>  
+
+{% endblock content %}

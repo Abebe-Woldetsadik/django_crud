@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class= "container mt-5">
+    <div class="card shadow-lg p-4 alert alert-success" style="max-width: 600px; margin: 0 auto;">
+        <div class="card-body text-center">
+            <h1 class="card-title text-success mb-3">Success!</h1>
+            <p class="card-text">Your form has been submitted successfully.</p>
+    <a href="{% url 'crudapp:user_list' %}" class="btn btn-success mt-3">Go Back to User List</a>
+</div>
+</div>
+</div>
+{% endblock %}
+
